@@ -1,0 +1,19 @@
+<h1>{{ title }}</h1>
+
+<form action="/products/create" method="post">
+
+    <input type="text" name="name" id="name" required>
+    <br>
+    <input type="number" value="99" name="price">
+    <br>
+    <select name="categoryId" id="categoryId">
+        {{#each categories}}
+            <option value="{{id}}">
+                {{name}}
+            </option>
+        {{/each}}
+
+    </select>
+    <br>
+    <input type="submit">
+</form>

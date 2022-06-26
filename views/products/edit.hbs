@@ -1,0 +1,22 @@
+<h1>{{title}}</h1>
+
+<form action="/products/update" method="post">
+    <input type="hidden" name="id" value="{{id}}">
+    <br>
+    <input type="text" name="name" id="name" value="{{ name }}" required>
+    <br>
+    <input type="number" name="price" value="{{price}}">
+    <br>
+    <select name="categoryId" id="categoryId">
+        <option value="{{categoryId}}">
+            Default
+        </option>
+        {{#each categories}}
+            <option value="{{id}}">
+                {{name}}
+            </option>
+        {{/each}}
+    </select>
+    <br>
+    <input type="submit">
+</form>

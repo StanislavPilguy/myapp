@@ -1,0 +1,13 @@
+<h1> {{ name }}</h1>
+
+<a href="/categories/edit/{{id}}">Edit</a>
+<a href="/categories/delete/{{id}}">Delete</a>
+
+<h2>Products</h2>
+
+
+<ul>
+    {{#each products}}
+        <li><a href="/products/{{id}}">{{ name }}</a></li>
+    {{/each}}
+</ul>
